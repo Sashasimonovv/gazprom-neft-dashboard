@@ -1,6 +1,6 @@
 # Дешборд курсов валют
 
-React, [Apache ECharts](https://echarts.apache.org/), [Consta UI Kit](https://consta.design/libs/uikit). Макет: [Figma](https://www.figma.com/file/CppcOcor3NP1BfrppRgd4a/Test?node-id=0%3A1&mode=dev).
+Динамика курсов USD, EUR, CNY к рублю: React, [Apache ECharts](https://echarts.apache.org/), [Consta UI Kit](https://consta.design/libs/uikit). Макет: [Figma](https://www.figma.com/file/CppcOcor3NP1BfrppRgd4a/Test?node-id=0%3A1&mode=dev).
 
 ## Запуск
 
