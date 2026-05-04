@@ -5,6 +5,7 @@ const RATES_API_URL = process.env.REACT_APP_RATES_API_URL;
 
 const CURRENCY_CODES: CurrencyCode[] = ['USD', 'EUR', 'CNY'];
 
+/** Приводит одну строку ответа API к RatePoint (поддерживаются вложенный rates и плоские поля). */
 function normalizeApiRow(row: unknown): RatePoint | null {
   if (!row || typeof row !== 'object') return null;
   const o = row as Record<string, unknown>;

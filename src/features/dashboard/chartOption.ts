@@ -1,6 +1,7 @@
 import type { EChartsOption } from 'echarts';
 import type { CurrencyCode, RatePoint } from '../../types/rates';
 
+/** Минимальный тип для axis tooltip formatter (в echarts не всегда экспортируется публичный тип параметра). */
 type AxisTooltipItem = { dataIndex?: number };
 
 export const CHART_ORANGE = '#F38B00';

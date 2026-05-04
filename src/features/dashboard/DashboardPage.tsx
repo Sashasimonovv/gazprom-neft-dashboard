@@ -12,6 +12,7 @@ import { buildLineChartOption, CHART_ORANGE, computeAverage } from './chartOptio
 
 import './DashboardPage.css';
 
+/** Элемент переключателя валют для ChoiceGroup (label — символ на кнопке). */
 type CurrencyChoice = { label: string; code: CurrencyCode };
 
 const CURRENCY_ITEMS: CurrencyChoice[] = [

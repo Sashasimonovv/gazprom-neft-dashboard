@@ -20,6 +20,7 @@ export const ReactECharts: React.FC<ReactEChartsProps> = ({
   const hostRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<ECharts | null>(null);
 
+  // Один раз создаём экземпляр ECharts и освобождаем при размонтировании.
   useEffect(() => {
     const el = hostRef.current;
     if (!el) return;
@@ -37,6 +38,7 @@ export const ReactECharts: React.FC<ReactEChartsProps> = ({
     chartRef.current?.setOption(option, setOptionOpts ?? { notMerge: true });
   }, [option, setOptionOpts]);
 
+  // Подгон размера графика под контейнер (в т.ч. при смене ширины окна/лейаута).
   useEffect(() => {
     const chart = chartRef.current;
     const el = hostRef.current;
