@@ -1,6 +1,6 @@
 # Дешборд курсов валют
 
-Динамика курсов USD, EUR, CNY к рублю: React, [Apache ECharts](https://echarts.apache.org/), [Consta UI Kit](https://consta.design/libs/uikit). Макет: [Figma](https://www.figma.com/file/CppcOcor3NP1BfrppRgd4a/Test?node-id=0%3A1&mode=dev).
+Веб-приложение: динамика курсов USD, EUR и CNY к рублю по дням. Стек: React, TypeScript, [Apache ECharts](https://echarts.apache.org/), [Consta UI Kit](https://consta.design/libs/uikit). Макет: [Figma](https://www.figma.com/file/CppcOcor3NP1BfrppRgd4a/Test?node-id=0%3A1&mode=dev).
 
 ## Запуск
 
@@ -9,33 +9,31 @@ npm install
 npm start
 ```
 
-Сборка:
+Продакшен-сборка:
 
 ```bash
 npm run build
 ```
 
-## Переменные окружения
+## Данные
 
-Файл `.env.local` в корне проекта (рядом с `package.json`):
+По умолчанию используются статические ряды из `src/data/data.ts`.
+
+Опционально можно подключить свой API через переменную в `.env.local` (см. `.env.example`):
 
 ```env
-REACT_APP_RATES_API_URL=https://example.mockapi.io/v1/rates
+REACT_APP_RATES_API_URL=https://your-api.example/v1/rates
 ```
 
-Если переменная не задана, используются данные из `src/data/data.ts`.
+Ожидается JSON-массив объектов с полем `date` (`YYYY-MM-DD`) и курсами: вложенный объект `rates` с ключами `USD`, `EUR`, `CNY` или плоские поля `usd`/`eur`/`cny` (регистр ключей поддерживается).
 
-Ответ API — JSON-массив. Элемент: либо `{ "date": "YYYY-MM-DD", "rates": { "USD", "EUR", "CNY" } }`, либо плоские поля `date` и `usd`/`eur`/`cny` (или `USD`/`EUR`/`CNY`). Шаблон: `.env.example`.
-
-## Структура
+## Структура проекта
 
 | Путь | Назначение |
 |------|------------|
+| `src/features/dashboard/DashboardPage.tsx` | Страница дешборда |
+| `src/features/dashboard/chartOption.ts` | Конфигурация графика ECharts |
+| `src/data/data.ts` | Локальные данные |
+| `src/api/fetchRates.ts` | Загрузка с API |
+| `src/types/rates.ts` | Типы данных |
 | `src/Echarts/ReactECharts.tsx` | Обёртка над ECharts |
-| `src/data/data.ts` | Статические ряды |
-| `src/api/fetchRates.ts` | Загрузка данных |
-| `src/types/rates.ts` | Типы |
-| `src/features/dashboard/chartOption.ts` | Опции графика |
-| `src/features/dashboard/DashboardPage.tsx` | UI дешборда |
-
-В репозиторий не добавляют `node_modules/`, `build/`, `.env.local`. По условиям задания репозиторий должен быть публичным, в ответе — ссылка на него.
