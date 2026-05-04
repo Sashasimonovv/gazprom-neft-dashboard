@@ -1,0 +1,102 @@
+.dashboard {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.dashboard__alert {
+  margin-bottom: 12px;
+}
+
+.dashboard__retry {
+  margin-bottom: 20px;
+}
+
+.dashboard__card {
+  min-height: 200px;
+  background: var(--color-bg-default, #fff);
+}
+
+.dashboard__cardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.dashboard__titles {
+  min-width: 0;
+}
+
+.dashboard__crumb {
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.dashboard__mainTitle {
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.dashboard__apiHint {
+  display: block;
+  margin-top: 8px;
+}
+
+.dashboard__currencySwitch {
+  flex-shrink: 0;
+}
+
+.dashboard__body {
+  display: flex;
+  align-items: stretch;
+  gap: 8px 32px;
+  margin-top: 8px;
+}
+
+.dashboard__chart {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard__aside {
+  flex: 0 0 auto;
+  width: min-content;
+  min-width: 140px;
+  padding-top: 8px;
+  text-align: right;
+}
+
+.dashboard__asideLabel {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dashboard__asideValue {
+  margin: 0;
+  line-height: 1.15;
+}
+
+.dashboard__asideValueNum {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+}
+
+.dashboard__asideValueRub {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: var(--color-typo-secondary, #667985);
+}
+
+.dashboard__loaderWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 0;
+}
