@@ -38,6 +38,6 @@ REACT_APP_RATES_API_URL=https://your-api.example/v1/rates
 | `src/types/rates.ts` | Типы данных |
 | `src/Echarts/ReactECharts.tsx` | Обёртка над ECharts |
 
-## Отчёт о выполнении задания
+## Описание реализации
 
-Кратко **что и как** делалось по ТЗ (для руководителя / ревью): [`README_REPORT.md`](./README_REPORT.md).
+Структура кода и принятые решения: [`README_REPORT.md`](./README_REPORT.md).
